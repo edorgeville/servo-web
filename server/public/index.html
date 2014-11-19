@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <title></title>
+    <style>
+        html,body{
+            width:100%;height:100%;
+        }
+        input[type=range]
+        {
+            writing-mode: bt-lr; /* IE */
+            -webkit-appearance: slider-vertical; /* WebKit */
+            width: 100%;
+            height: 100%;
+            /*padding: 0 5px;*/
+        }
+    </style>
+</head>
+<body>
+    <script src="/socket.io/socket.io.js"></script><script>
+        //-----------
+        //
+        //  SOCKET CONNECTION
+        //
+        //
+
+        var socket = io();
+
+        // socket.emit('angle', 0);
+
+        var x = document.createElement("INPUT");
+        x.setAttribute("type", "range");
+        document.body.appendChild(x);
+
+        x.oninput = function(e){
+            socket.emit('angle', this.value);
+        }
+
+    </script>
+</body>
