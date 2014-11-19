@@ -2,7 +2,7 @@
 #include <Massenger.h>
 
 Servo myservo;
-int angle = 0;
+int angle = 1000;
 
 Massenger massenger = Massenger( &Serial , massageReceived);
 

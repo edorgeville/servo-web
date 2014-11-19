@@ -42,7 +42,7 @@ var serial;
 function start(){
     serial = new serialport.SerialPort(port, {parser: serialport.parsers.readline( '\r' )  } );
     serial.on("open", function () {
-        serial.write("angle 0\r", function(err, results) {
+        serial.write("angle 1000\r", function(err, results) {
             // console.log('err ' + err);
             // console.log('results ' + results);
         });
