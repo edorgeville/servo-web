@@ -68,7 +68,7 @@ function start(){
     });
 
     function setAngle(e){
-        var angle = map_number(e, 0, 100, 1000, 2000);
+        var angle = map_number(e, 0, 100, 1000, 2500);
         console.log('angle ' + angle);
         serial.write("angle " + angle + "\r", function(err, results){
 
